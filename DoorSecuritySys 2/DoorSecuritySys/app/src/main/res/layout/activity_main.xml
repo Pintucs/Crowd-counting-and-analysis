@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.doorsecuritysys.MainActivity">
+
+    <Button
+        android:id="@+id/btCheck"
+        android:text="View Person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_4sdp"
+        android:visibility="gone"
+        android:id="@+id/ll"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:src="@mipmap/bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/_6sdp"
+                android:gravity="center"
+                android:id="@+id/reject"
+                android:background="@drawable/reject_bg"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:src="@mipmap/reject"/>
+                <TextView
+                    android:text="Reject"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_17sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/deny"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/_6sdp"
+                android:gravity="center"
+                android:id="@+id/llTick"
+                android:background="@drawable/aprove_bg"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:src="@mipmap/tick"/>
+                <TextView
+
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:text="Accept"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_17sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tick"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
